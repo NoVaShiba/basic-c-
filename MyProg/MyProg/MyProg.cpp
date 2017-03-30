@@ -3,12 +3,12 @@ using namespace std;
 
 int main()
 {
-	int gallons, liters;
+	double gallons, liters;
 
 	cout << "¬ведите количество галлонов: ";
 	cin >> gallons;
 
-	liters = gallons * 4;
+	liters = gallons * 3.7854;
 
 	cout << "Ћитров: " << liters;
 
