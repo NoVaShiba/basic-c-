@@ -3,16 +3,14 @@ using namespace std;
 
 int main()
 {
-	int x;
-	int y;
-	char sym;
+	int gallons, liters;
 
-	x = 5;
-	y = 10;
-	sym = '*';
+	cout << "Введите количество галлонов: ";
+	cin >> gallons;
 
-	cout << "Эта программа выводит занчение переменной x, y, sym: ";
-	cout << x, y, sym;
+	liters = gallons * 4;
+
+	cout << "Литров: " << liters;
 
 	return 0;
 }
