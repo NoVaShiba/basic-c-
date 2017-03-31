@@ -3,19 +3,23 @@
 #include <locale>
 using namespace std;
 
-void mul(int x, int y);
+int mul(int x, int y);
 
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	mul(10, 20);
-	mul(5, 6);
-	mul(8, 9);
+	int answer;
+
+	answer = mul(10, 11);
+
+	cout << "Ответ равен " << answer;
 
 	return 0;
 }
-void mul(int x, int y)
+int mul(int x, int y)
+
+
 {
-	cout << x * y << " ";
+	return x * y;
 }
