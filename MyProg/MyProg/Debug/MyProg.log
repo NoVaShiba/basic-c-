@@ -1,3 +1,5 @@
 ﻿  MyProg.cpp
+c:\users\ярослав и владислав\desktop\файлы\c++\basic-c-.git\myprog\myprog\myprog.cpp(10): warning C4101: liters: неиспользованная локальная переменная
+c:\users\ярослав и владислав\desktop\файлы\c++\basic-c-.git\myprog\myprog\myprog.cpp(10): warning C4101: gallons: неиспользованная локальная переменная
   MyProg.vcxproj -> C:\Users\Ярослав и Владислав\Desktop\файлы\C++\basic-c-.git\MyProg\Debug\MyProg.exe
   MyProg.vcxproj -> C:\Users\Ярослав и Владислав\Desktop\файлы\C++\basic-c-.git\MyProg\Debug\MyProg.pdb (Partial PDB)
