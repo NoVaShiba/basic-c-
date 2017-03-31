@@ -9,17 +9,10 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	int answer;
-
-	answer = mul(10, 11);
-
-	cout << "Ответ равен " << answer;
+	cout << "Один.\n";
+	cout << "Два.\n";
+	cout << "Три ";
+	cout << "четыре";
 
 	return 0;
-}
-int mul(int x, int y)
-
-
-{
-	return x * y;
 }
