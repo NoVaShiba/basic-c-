@@ -3,16 +3,20 @@
 #include <locale>
 using namespace std;
 
-int mul(int x, int y);
-
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	cout << "Один.\n";
-	cout << "Два.\n";
-	cout << "Три ";
-	cout << "четыре";
+	int a, b;
+
+	cout << "Введите первое число: ";
+	cin >> a;
+	cout << "Введите второе число: ";
+	cin >> b;
+
+	if (a < b) cout << "Превое чило меньше второго.";
+	else if (a > b) cout << "Первое число больше второго.";
+	else if (a == b) cout << "Числа равны.";
 
 	return 0;
 }
