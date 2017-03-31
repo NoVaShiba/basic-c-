@@ -7,16 +7,11 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	int a, b;
+	int count;
 
-	cout << "Введите первое число: ";
-	cin >> a;
-	cout << "Введите второе число: ";
-	cin >> b;
+	for (count = 1; count <= 100; count = count + 1)
+		cout << count << " ";
 
-	if (a < b) cout << "Превое чило меньше второго.";
-	else if (a > b) cout << "Первое число больше второго.";
-	else if (a == b) cout << "Числа равны.";
 
 	return 0;
 }
