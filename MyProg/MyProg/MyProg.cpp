@@ -1,22 +1,21 @@
 #include <iostream>
+#include <cstdlib>
 #include <locale>
 using namespace std;
 
-void myfunc();
+void mul(int x, int y);
 
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	double gallons, liters;
 
-	cout << "В функции main().";
-	myfunc();
-	cout << "Снова в функции main().";
+	mul(10, 20);
+	mul(5, 6);
+	mul(8, 9);
 
 	return 0;
 }
-
-void myfunc()
+void mul(int x, int y)
 {
-	cout << "В функции myfunc().";
+	cout << x * y << " ";
 }
