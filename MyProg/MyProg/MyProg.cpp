@@ -16,6 +16,7 @@ int main()
 	cout << "\nВычисление суммы чисел от 1 до 6 .\n";
 	total(6);
 
+	system("pause");
 	return 0;
 }
 
