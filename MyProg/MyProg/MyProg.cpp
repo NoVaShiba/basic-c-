@@ -3,59 +3,22 @@
 #include <locale>
 using namespace std;
 
-void play(int m);
-
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	int option;
-	int magic; 
+	int arr[3][2] = { {2, 5}, {2, 7}, {5, 7} };
 
-	magic = rand();
-
-	do {
-		cout << "1. Получить новое магическое число\n";
-		cout << "2. Сыграть\n";
-		cout << "3. Выйти из программы\n";
-		do {
-			cout << "Введте свой вариант: ";
-			cin >> option;
-		} while (option < 1 || option > 3);
-		switch (option) {
-		case 1:
-			magic = rand();
-			break;
-		case 2:
-			play(magic);
-			break;
-		case 3:
-			cout << "До свидания!\n";
-			break;
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 2; j++) {
+			cout << " " << arr[i][j];
 		}
-	} while (option != 3);
+		cout << endl;
+	}
+	/*for (int i = 0; i < 5; i++) {
+		cout << arr[i] << "\n" ;
+	}*/
 	
 	system("pause");
 	return 0;
-}
-
-void play(int m)
-{
-	int t, x;
-
-	for (t = 0; t < 100; t++) {
-		cout << "Угадайте магическое число: ";
-		cin >> x;
-
-		if (x == m) {
-			cout << "** Правильно**\n";
-			return;
-		}
-		else {
-			if (x < m) cout << "Магическое число больше.\n";
-			else cout << "Магическое число меньше.\n";
-		}
-	}
-	cout << "Вы использовали все шансы угадать число. "
-		<< "Попытайтесь снова.\n";
 }
