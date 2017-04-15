@@ -1,33 +1,50 @@
 #include <iostream>
-#include <cstring>
+#include <cstdlib>
 #include <locale>
 using namespace std;
+
+void drill();
+
+int coun;  //Переменные cout и num_right -- глобальные.
+int num_right;
 
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	
-	int choice;
+	cout << "Сколько практических упражнений: ";
+	cin >> coun;
 
-	cout << "(1) сложить числа или ";
-	cout << "(2) конкатенировать строки?: ";
-
-	cin >> choice;
-	if (choice == 1) {
-		int a, b;
-		cout << "Введите два числа: ";
-		cin >> a >> b;
-		cout << "Их сумма равна: " << a + b << '\n';
-	}
-	else {
-		char s1[80], s2[80];
-		cout << "Введите две стоки: ";
-		cin >> s1;
-		cin >> s2;
-		strcat_s(s1, s2);
-		cout << "Конкатенация равна: " << s1 << '\n';
-	}
+	num_right = 0;
+	do {
+		drill();
+		coun--;
+	} while (coun);
+	cout << "Вы дали " << num_right << " правильных ответов.\n";
 
 	system("pause");
 	return 0;
+}
+
+void drill()
+{
+	int count; //Эта переменная count -- локальна и никак не связанна с одноименной глобальной.
+	int a, b, ans;
+
+	//Генерируем числа от 0 до 99.
+	a = rand() % 100;
+	b = rand() % 100;
+
+	//Пользователь получает три попытки дать правильный ответ
+	for (count = 0; count < 3; count) {
+		cout << "Сколько будет " << a << " + " << b << "?" << '\n';
+		cin >> ans;
+		if (ans == a + b) {
+			cout << "Правильно";
+			num_right++;
+			return;
+		}
+	}
+	cout << "Вы использовали все попытки.\n";
+	cout << "Ответ равен " << a + b << '\n';
 }
