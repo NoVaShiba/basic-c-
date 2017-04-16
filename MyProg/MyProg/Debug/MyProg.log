@@ -1,3 +1,3 @@
 ﻿  MyProg.cpp
-c:\users\ярослав и владислав\desktop\файлы\c++\basic-c-.git\myprog\myprog\myprog.cpp(45): error C2562: drill: функция типа "void", возвращающая значение
-  c:\users\ярослав и владислав\desktop\файлы\c++\basic-c-.git\myprog\myprog\myprog.cpp(29): note:  см. объявление "drill"
+  MyProg.vcxproj -> C:\Users\Ярослав и Владислав\Desktop\файлы\C++\basic-c-.git\MyProg\Debug\MyProg.exe
+  MyProg.vcxproj -> C:\Users\Ярослав и Владислав\Desktop\файлы\C++\basic-c-.git\MyProg\Debug\MyProg.pdb (Partial PDB)

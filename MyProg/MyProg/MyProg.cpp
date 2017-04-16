@@ -20,7 +20,7 @@ int main()
 		drill();
 		coun--;
 	} while (coun);
-	cout << "Вы дали " << num_right << " правильных ответов.\n";
+	cout << " Вы дали " << num_right << " правильных ответов.\n";
 
 	system("pause");
 	return 0;
@@ -36,11 +36,11 @@ void drill()
 	b = rand() % 100;
 
 	//Пользователь получает три попытки дать правильный ответ
-	for (count = 0; count < 3; count) {
-		cout << "Сколько будет " << a << " + " << b << "?" << '\n';
+	for (count = 0; count < 3; count++) {
+		cout << "\nСколько будет " << a << " + " << b << "?" << '\n';
 		cin >> ans;
 		if (ans == a + b) {
-			cout << "Правильно";
+			cout << "Правильно.";
 			num_right++;
 			return;
 		}
