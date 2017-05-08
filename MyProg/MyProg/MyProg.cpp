@@ -3,37 +3,35 @@
 #include <locale>
 using namespace std;
 
-enum mall {parking = -1, hall, many_shops, roof};
+class Auto {
+private:
+	int day, month, year;
+	char nameAuto;
+public:
+	void message() {
+		cout << "Класс работает." << endl;
+	}
+
+	void set(int date_day, int date_moth, int date_year, char name_Auto) {
+		day = date_day;
+		month = date_moth;
+		year = date_year;
+		nameAuto = name_Auto;
+	}
+
+	void get() {
+		cout << "Год выпуска этой машины - " << year << "\nМесяц выпуска этой машины - " << month << "\nДень выпуска этой машины - " << day << "\nНазвание машиный - " << nameAuto << endl;
+	}
+};
 
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	
-	int floor;
-	bool exit = false;
-
-	while (!exit) {
-		cout << "Enter your floor (from -1 to 2): " << endl;
-		cin >> floor;
-		switch (floor) {
-			case parking:
-				cout << "You on the -1 floor - parking" << endl;
-				break;
-			case hall:
-				cout << "You on the 0 floor - hall" << endl;
-				break;
-			case many_shops:
-				cout << "You on the 1 floor - many shops" << endl;
-				break;
-			case roof:
-				cout << "You on the 2 floor - roof" << endl;
-				break;
-			default:
-				cout << "Floors only from -1 to 2" << endl;
-		}
-		cout << "If yo want play again press 0 or press 1 to exit this game" << endl;
-		cin >> exit;
-	}
+	Auto shkoda;
+	shkoda.message();
+	shkoda.set(17, 10, 2005, 'sh');
+	shkoda.get();
 
 	system("pause");
 	return 0;
